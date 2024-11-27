@@ -19,7 +19,7 @@ from django.urls import path,include
 
 
 urlpatterns = [
+    path('',include("prima_app.urls",namespace="prima_app")),
     path('admin/', admin.site.urls),
-    path('',include("prima_app.urls",namespace="prima_app"))
 ]
 
