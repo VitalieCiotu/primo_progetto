@@ -1,12 +1,16 @@
 <!DOCTYPE html>
+{%extends "base.html"%}
+
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>{%block title%} {{block.super}} Homepage {%endblock title%}</title>
 </head>
 <body>
-    <h1>Benvenuto</h1>
+    {%block content%}
+        <h1>Benvenuto</h1>
+    {%endblock content%}
 </body>
 </html>

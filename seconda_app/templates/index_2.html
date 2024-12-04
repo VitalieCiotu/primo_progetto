@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{%extends "base.html"%}
+
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%} {{block.super}} Index {%endblock title%}</title>
+</head>
+<body>
+    {%block content%}
+        <ol>
+            <li><a href="/">index_root</a></li>
+            <li><a href="{% url 'seconda_app:es_if' %}">Es_if</a></li>
+            <li><a href="{% url 'seconda_app:if_else_elif' %}">If_else_elif</a></li>
+            <li><a href="{% url 'seconda_app:es_for' %}">Es_for</a></li>
+        </ol>
+    {%endblock content%}
+
+</body>
+</html>
