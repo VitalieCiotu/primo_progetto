@@ -1,69 +1,73 @@
 <!DOCTYPE html>
+{%extends "base.html"%}
+
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ES_for</title>
+    <title>{%block title%} {{block.super}} Es_for {%endblock title%}</title>
 </head>
 <body>
-    <b>Cicla una sequenza usando forloop.counter</b><br />
-    <br />
-    {% for x in list2 %}
-        <i>{{ forloop.counter }} :</i> {{ x }}<br />
-    {% endfor %}
+    {%block content%}
+        <b>Cicla una sequenza usando forloop.counter</b><br />
+        <br />
+        {% for x in list2 %}
+            <i>{{ forloop.counter }} :</i> {{ x }}<br />
+        {% endfor %}
 
-    <br />
-    <b>Cicla una sequenza usando forloop.counter0</b><br />
-    <br />
-    {% for x in list2 %}
-        <i>{{ forloop.counter0 }} :</i> {{ x }}<br />
-    {% endfor %}
+        <br />
+        <b>Cicla una sequenza usando forloop.counter0</b><br />
+        <br />
+        {% for x in list2 %}
+            <i>{{ forloop.counter0 }} :</i> {{ x }}<br />
+        {% endfor %}
 
-    <br />
-    <b>Stampa il primo elemento della sequenza usando forloop.first</b><br />
-    <br />
-    {% for x in list2 %}
-        {% if forloop.first %}
-            <i>Il primo elemento</i> - {{ x }}<br />
-        {% endif %}
-    {% endfor %}
+        <br />
+        <b>Stampa il primo elemento della sequenza usando forloop.first</b><br />
+        <br />
+        {% for x in list2 %}
+            {% if forloop.first %}
+                <i>Il primo elemento</i> - {{ x }}<br />
+            {% endif %}
+        {% endfor %}
 
-    <br />
-    <b>Stampa l'ultimo elemento della lista usando forloop.last</b><br />
-    <br />
-    {% for x in list2 %}
-        {% if forloop.last %}
-            <i>L'ultimo elemento</i> - {{ x }}<br />
-        {% endif %}
-    {% endfor %}
+        <br />
+        <b>Stampa l'ultimo elemento della lista usando forloop.last</b><br />
+        <br />
+        {% for x in list2 %}
+            {% if forloop.last %}
+                <i>L'ultimo elemento</i> - {{ x }}<br />
+            {% endif %}
+        {% endfor %}
 
-    <br />
-    <b>Stampa il numero degli elementi non ancora ciclati usando forloop.revcounter</b><br />
-    <br />
-    {% for x in list2 %}
-        <i>Numero degli elementi da dover ancora ciclare</i> - {{ forloop.revcounter }}<br />
-    {% endfor %}
+        <br />
+        <b>Stampa il numero degli elementi non ancora ciclati usando forloop.revcounter</b><br />
+        <br />
+        {% for x in list2 %}
+            <i>Numero degli elementi da dover ancora ciclare</i> - {{ forloop.revcounter }}<br />
+        {% endfor %}
 
-    <br />
-    <b>Stampa il numero degli elementi non ancora ciclati usando forloop.revcounter0</b><br />
-    <br />
-    {% for x in list2 %}
-        <i>Elementi</i> - {{ forloop.revcounter0 }}<br />
-    {% endfor %}
+        <br />
+        <b>Stampa il numero degli elementi non ancora ciclati usando forloop.revcounter0</b><br />
+        <br />
+        {% for x in list2 %}
+            <i>Elementi</i> - {{ forloop.revcounter0 }}<br />
+        {% endfor %}
 
-    <br />
-    <b>Stampa la sequenza al contrario usando reversed, attributo del tag</b><br />
-    <br />
-    {% for x in list2 reversed %}
-        <i>{{ x }}</i><br />
-    {% endfor %}
+        <br />
+        <b>Stampa la sequenza al contrario usando reversed, attributo del tag</b><br />
+        <br />
+        {% for x in list2 reversed %}
+            <i>{{ x }}</i><br />
+        {% endfor %}
 
-    <h2>Contenuto del dizionario</h2>
-    <ul>
-        {% for key, value in my_dict.items %}
-            <li>{{key}}:{{value}}</li>
-        {%endfor%}
-    </ul>
+        <h2>Contenuto del dizionario</h2>
+        <ul>
+            {% for key, value in my_dict.items %}
+                <li>{{key}}:{{value}}</li>
+            {%endfor%}
+        </ul>
+    {%endblock content%}
 </body>
 </html>
