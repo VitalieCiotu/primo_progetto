@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Query
+{% endblock title %}
+
+{% block content %}
+    <h4>Articoli per Cognome</h4>
+    <ul>
+        {% for articolo in articoli_cognome %}
+            <li>{{ articolo.titolo }}</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Numero Totale di Articoli</h4>
+    <p>{{ numero_totale_articoli }}</p>
+
+    <h4>Numero di Articoli per Giornalista Specifico</h4>
+    <p>{{ numero_articoli_giornalista }}</p>
+
+    <h4>Articoli Ordinati per Visualizzazioni</h4>
+    <ul>
+        {% for articolo in articoli_ordinati %}
+            <li>{{ articolo.titolo }} - {{ articolo.visualizzazioni }} visualizzazioni</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Articoli Senza Visualizzazioni</h4>
+    <ul>
+        {% for articolo in articoli_senza_visualizzazioni %}
+            <li>{{ articolo.titolo }}</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Articolo Più Visualizzato</h4>
+    <p>{{ articolo_piu_visualizzato.titolo }} - {{ articolo_piu_visualizzato.visualizzazioni }} visualizzazioni</p>
+
+    <h4>Giornalisti Nati Dopo il 1990</h4>
+    <ul>
+        {% for giornalista in giornalisti_data %}
+            <li>{{ giornalista.nome }} {{ giornalista.cognome }}</li>
+        {% empty %}
+            <li>No giornalisti found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Articoli Pubblicati il 1 Gennaio 2023</h4>
+    <ul>
+        {% for articolo in articoli_del_giorno %}
+            <li>{{ articolo.titolo }}</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Articoli Pubblicati nel 2023</h4>
+    <ul>
+        {% for articolo in articoli_periodo %}
+            <li>{{ articolo.titolo }}</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Articoli di Giornalisti Nati Prima del 1980</h4>
+    <ul>
+        {% for articolo in articoli_giornalisti %}
+            <li>{{ articolo.titolo }}</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Giornalista Più Giovane</h4>
+    <p>{{ giornalista_giovane.nome }} {{ giornalista_giovane.cognome }}</p>
+
+    <h4>Giornalista Più Anziano</h4>
+    <p>{{ giornalista_anziano.nome }} {{ giornalista_anziano.cognome }}</p>
+
+    <h4>Ultimi 5 Articoli Pubblicati</h4>
+    <ul>
+        {% for articolo in ultimi_5 %}
+            <li>{{ articolo.titolo }} - {{ articolo.data }}</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Articolo con almeno 100 Visualizzazioni</h4>
+    <ul>
+        {% for articolo in articoli_minime_visualizzazioni %}
+            <li>{{ articolo.titolo }} - {{ articolo.visualizzazioni }} visualizzazioni</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Articolo con la Parola Importante nel Titolo</h4>
+    <ul>
+        {% for articolo in articoli_parola %}
+            <li>{{ articolo.titolo }}</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Articoli Pubblicati in un Determinato Mese e Anno</h4>
+    <ul>
+        {% for articolo in articoli_mese_anno %}
+            <li>{{ articolo.titolo }}</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Giornalisti con Articoli Popolari</h4>
+    <ul>
+        {% for giornalista in giornalisti_con_articoli_popolari %}
+            <li>{{ giornalista.nome }} {{ giornalista.cognome }}</li>
+        {% empty %}
+            <li>No giornalisti found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Articoli con AND</h4>
+    <ul>
+        {% for articolo in articolo_con_and %}
+            <li>{{ articolo.titolo }}</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Articoli con OR</h4>
+    <ul>
+        {% for articolo in articoli_con_or %}
+            <li>{{ articolo.titolo }}</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Articoli con NOT</h4>
+    <ul>
+        {% for articolo in articoli_con_not %}
+            <li>{{ articolo.titolo }}</li>
+        {% empty %}
+            <li>No articoli found.</li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}

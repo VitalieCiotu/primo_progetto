@@ -1,14 +1,20 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    {% block title %}
     <title>Index</title>
+    {% endblock title %}
 </head>
 <body>
+    {%block content%}
     <ol>
         <li><a href="/admin">Pannello admin</a></li>
         <li><a href="{% url 'prima_app:index'%}">Index Prima App</a></li>
-        <li><a href="{% url 'seconda_app:index_2'%}">Index Seconda App</a></li>
+        <li><a href="{% url 'seconda_app:index'%}">Index Seconda App</a></li>
+        <li><a href="{% url 'news:indexNews'%}">Index News</a></li>
     </ol>
+    {%endblock content%}
 </body>
 </html>

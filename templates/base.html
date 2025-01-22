@@ -50,6 +50,18 @@
                 <a class="dropdown-item" href="{% url 'seconda_app:if_else_elif' %}">If_else_elif</a>
                 <a class="dropdown-item" href="{% url 'seconda_app:es_for' %}">Es_for</a>
               </div>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                App News
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'news:homeview' %}">Home</a>
+                <a class="dropdown-item" href="{% url 'news:listaArticoli' %}">Lista Articoli</a>
+                <a class="dropdown-item" href="{% url 'news:query' %}">Query</a>
+
+              </div>
             </li>
           </ul>
           
