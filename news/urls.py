@@ -1,4 +1,4 @@
-from .views import indexNews, home, ArticoloDetailView, listaArticoli, queryBase
+from .views import indexNews, home, ArticoloDetailView, GiornalistaDetailView, listaArticoli, queryBase
 from django.urls import path
 from django.contrib import admin
 
@@ -21,6 +21,7 @@ urlpatterns = [
     path('listaArticoli/<int:pk>/', listaArticoli, name='listaArticoli'),
     path('listaArticoli/', listaArticoli, name='listaArticoli'),
     path('query/', queryBase, name='query'),
+    path('giornalisti/<int:pk>/', GiornalistaDetailView, name='giornalista_detail'),
 
     # Rimuovi o sostituisci la route per queryBase se non esiste
 ]
