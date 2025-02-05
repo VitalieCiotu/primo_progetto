@@ -46,6 +46,15 @@ def ArticoloDetailView(request, pk):
 def indexNews(request):
     return render(request, "indexNews.html")
 
+def GiornalistaDetailView(request, pk):
+    # articolo = Articolo.objects.get(pk=pk)
+    giornalista = get_object_or_404(Giornalista, pk=pk)
+    articoli = giornalista.articolo.all()
+    context = {"giornalista": giornalista,
+               "articoli":articoli
+               }
+    return render(request, "giornalista_detail.html", context)
+
 def queryBase(request):
     #1.Tutti gli articoli scritti da giornalisti di un certo cognome:
     articoli_cognome = Articolo.objects.filter(giornalista__cognome='Rossi')

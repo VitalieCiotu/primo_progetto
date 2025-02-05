@@ -4,9 +4,13 @@
 {%endblock title %}
 {%block content%}
     {%for articolo in articoli%}
-        <h4><b>Titolo: </b>{{articolo.titolo}}</h4>
-        <h4><b>Contenuto: </b>{{articolo.contenuto}}</h4>
-        <h4><b>Autore: </b>{{articolo.giornalista}}</h4>
+        <p><strong>Titolo: </strong>
+            <a href="/news/articoli/{{articolo.id}}">{{articolo.titolo}}</a> 
+        </p>
+        <h6><b>Contenuto: </b>{{articolo.contenuto}}</h6>
+        <p><strong>Autore: </strong>
+            <a href="/news/giornalisti/{{articolo.id}}">{{articolo.giornalista}}</a>
+        </p>
         <br><br>
     {%endfor%}
 {%endblock content%}
