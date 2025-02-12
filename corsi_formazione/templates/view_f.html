@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Corsi Posti
+{% endblock title %}
+
+{% block content %}
+    
+    <h4>Corso con il maggior numero di posti diponibili</h4>
+    <h6>Titolo: {{CorsiMD.titolo}}</h6>
+    <h6>Posti disponibili: {{CorsiMD.posti_disponibili}}</h6>
+
+    <h4>Corso con il minor numero di posti diponibili</h4>
+    <h6>Titolo: {{CorsimD.titolo}}</h6>
+    <h6>Posti disponibili: {{CorsimD.posti_disponibili}}</h6>
+
+{% endblock content %}

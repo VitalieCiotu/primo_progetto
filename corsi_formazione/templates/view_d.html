@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Corsi Posti Diponibili
+{% endblock title %}
+
+{% block content %}
+    
+    <h4>I corsi con almeno 20 posti disponibili</h4>
+    {% for Corso in Corsi %}
+        <p><strong>Titolo: </strong>{{ Corso.titolo}}</a></p>
+        <p><strong>Posti disponibili: </strong>{{ Corso.posti_disponibili}}</p>
+        <hr>
+        
+    {% endfor %}
+
+{% endblock content %}

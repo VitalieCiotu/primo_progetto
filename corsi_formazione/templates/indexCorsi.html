@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+
+{%block title%} {{block.super}} Index Corsi {%endblock title%}
+
+{%block content%}
+    <h4>Benvenuto nel sistema di gestione dei Corsi di Formazione</h4>
+    <ol>
+        <li><a href="{% url 'corsi_formazione:Corsi_Ordinati' %}">Lista dei Corsi</a></li>
+        <li><a href="{% url 'corsi_formazione:corsiDataInizio' %}">Corsi Data Inizio</a></li>
+        <li><a href="{% url 'corsi_formazione:corsiPostiDisponibili' %}">Corsi Posti Diponibili</a></li>
+        <li><a href="{% url 'corsi_formazione:corsiDataTermina' %}">Corsi Data Fine</a></li>
+        <li><a href="{% url 'corsi_formazione:postiCorso' %}">Posti Corso</a></li>
+
+
+    </ol>
+{%endblock content%}

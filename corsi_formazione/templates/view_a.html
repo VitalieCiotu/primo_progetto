@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Elenco Corsi Ordinato
+{% endblock title %}
+
+{% block content %}
+    
+    <h4>Eenco corsi Ordinato</h4>
+    {% for Corso in Corsi %}
+        <p><strong>Titolo: </strong><a href="/corsi_formazione/giornalisti/{{articolo.id}}">{{ Corso.titolo}}</a></p>
+        <p><strong>| </strong>{{ Corso.data_inizio}}</p>
+        <hr>
+        
+    {% endfor %}
+
+{% endblock content %}
