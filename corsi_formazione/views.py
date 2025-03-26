@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import render
 from .models import Corso
 import datetime 
 from django.http import HttpResponse

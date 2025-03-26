@@ -48,9 +48,6 @@ class Articolo(models.Model):
 # Visualizzare tutti gli articoli scritti da un giornalista specifico
 #Articolo.objects.filter(giornalista=giornalista1)
 
-# Cancellare un articolo
-#articolo1.delete()
-
 # Cancellare tutti gli articoli di un giornalista
 #Articolo.objects.filter(giornalista=giornalista1).delete()
 
