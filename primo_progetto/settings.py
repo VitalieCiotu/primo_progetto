@@ -17,6 +17,8 @@ pymysql.install_as_MySQLdb()
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -70,7 +72,8 @@ TEMPLATES = [
                  os.path.join(BASE_DIR, 'seconda_app/templates'), 
                  os.path.join(BASE_DIR, 'news/templates'),
                  os.path.join(BASE_DIR, 'corsi_formazione/template'),
-                 os.path.join(BASE_DIR, 'forms_app/template')],
+                 os.path.join(BASE_DIR, 'forms_app/template'),
+                 os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -137,3 +140,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
